@@ -41,8 +41,9 @@ io.on('connection', function(socket){
   });
   
 });
+var port = process.env.PORT||3000; //which you can run both on Azure or local
 
-http.listen(3000, function(){
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
 
