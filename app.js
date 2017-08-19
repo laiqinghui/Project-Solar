@@ -20,10 +20,13 @@ io.on('connection', function(socket){
   socket.on('chat message', function(msg){//event 2
     console.log('message: ' + msg);
   });
-  socket.on('getVI', function(msg){//event 3
+  
+  socket.on('getVI', function(msg){//event 3: Client request for updates(On-demand)
   
 	var vi = getVI(function(vi){
-    //Here through the callback we get accessed to the vi obj
+	//This is the callback function that will be called when getVI is called
+	//So this will run at the return statement of getVI function (return  callback(...)) 
+    //Here through the callback we get accessed to the vi obj passed in from getVI function
 	//Send to client here
 	//console.log("Returned vi: ")
     //console.log(vi);
