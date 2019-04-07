@@ -20,12 +20,12 @@ io.on('connection', function(socket){
   socket.on('chat message', function(msg){//event 2
     console.log('message: ' + msg);
   });
-  
+
   socket.on('getVI', function(msg){//event 3: Client request for updates(On-demand)
-  
+
 	var vi = getVI(function(vi){
 	//This is the callback function that will be called when getVI is called
-	//So this will run at the return statement of getVI function (return  callback(...)) 
+	//So this will run at the return statement of getVI function (return  callback(...))
     //Here through the callback we get accessed to the vi obj passed in from getVI function
 	//Send to client here
 	//console.log("Returned vi: ")
@@ -39,11 +39,12 @@ io.on('connection', function(socket){
 		console.log("Sent err VI");
 	}
 	});
-	
-			
+
+
   });
-  
+
 });
+
 var port = process.env.PORT||3000; //which you can run both on Azure or local
 
 http.listen(port, function(){
@@ -51,12 +52,12 @@ http.listen(port, function(){
 });
 
 var getVI = function (callback){//Need to pass in a callback function to access return variable
-	
-	
-	
+
+
 	request('http://qhsolar.duckdns.org:5000/solar', function (error, response, data) {
+	//request('http://192.168.1.24:5000/solar', function (error, response, data) {
 		if (!error && response.statusCode == 200) {
-			console.log(data); 
+			console.log(data);
 			var jsonContent = JSON.parse(data);
 			//global.voltage = jsonContent.voltage;
 			console.log("jsonContent.voltage: ")
@@ -68,15 +69,15 @@ var getVI = function (callback){//Need to pass in a callback function to access 
 			//console.log(rtrval);
 			//console.log("Global voltage: ")
 			//console.log(global.voltage);
-    
+
 		} else {
-		 
+
 			console.log("Server Down");
 			return callback(null);
 		}
-	
+
 	});
-	
+
 };
 
 
@@ -85,18 +86,15 @@ var getVI = function (callback){//Need to pass in a callback function to access 
 setInterval(function() {
   request('http://qhsolar.duckdns.org:5000/solar', function (error, response, data) {
     if (!error && response.statusCode == 200) {
-        console.log(data); 
+        console.log(data);
 		var jsonContent = JSON.parse(data);
 		global.voltage = jsonContent.voltage;
 		//console.log("jsonContent.voltage: ")
 		//console.log(jsonContent.voltage);
 		console.log("Global voltage: ")
 		console.log(global.voltage);
-    
+
      } else console.log("Server Down");
 })
 }, 1000);
 */
-
-
-    
