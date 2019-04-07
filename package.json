@@ -1,6 +1,7 @@
 {
   "name": "projectsolar",
   "version": "1.0.0",
+  "engines":{"node": "6.13"}
   "description": "A data visualization web app for a small solar panel setup",
   "main": "index.js",
   "dependencies": {
@@ -22,4 +23,5 @@
     "url": "https://github.com/laiqinghui/Project-Solar/issues"
   },
   "homepage": "https://github.com/laiqinghui/Project-Solar#readme"
+
 }
