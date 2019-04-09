@@ -5,10 +5,17 @@ The power data is collected via the INA169 Analog DC Current Sensor which is con
 
 A NodeJS websever is built to host a web application which will display the data retrieved off the RPI3 in real-time or on demand. Data is stream off the the webserver to the client browser via web-socket.
 
-
-
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/Block.JPG" alt="alt text" width="250" height="250"> 
 
 
 The Setup
 
-<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/panel.jpg" alt="alt text" width="250" height="250"> 
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/panel.jpg" alt="alt text" width="250" height="250">
+
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/mppt.jpg" alt="alt text" width="250" height="250"> 
+
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/panel.jpg" alt="alt text" width="250" height="250">
+
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/Overall.jpg" alt="alt text" width="250" height="250"> 
+
+ 
