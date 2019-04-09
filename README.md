@@ -16,7 +16,7 @@ The Components
  
 <img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/rpi.jpg" alt="alt text" width="600" height="450">
 
-<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/mppt.jpg" alt="alt text" width="450" height="600">
+<img src="https://raw.githubusercontent.com/laiqinghui/Project-Solar/master/media/mppt.jpg" alt="alt text" width="600" height="450">
 
 
 
